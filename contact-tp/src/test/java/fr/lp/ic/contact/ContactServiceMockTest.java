@@ -36,7 +36,7 @@ public class ContactServiceMockTest {
 		contactService.newContact(name, "0298987878", "test@email.com");
 	}
 	
-	@Test
+/*	@Test
 	public void shouldInsertElement() throws ContactException {
 		String name = "Jul";
 		EasyMock.expect(contactDao.findByName(name)).andReturn(Optional.empty());
@@ -53,7 +53,7 @@ public class ContactServiceMockTest {
 		Assert.assertEquals(name, value.getName());
 		Assert.assertEquals("Phone error", "0298987878", value.getPhone());
 		Assert.assertEquals("mail error", "test@email.com", value.getEmail());
-	}
+	}*/
 	
 	@Test(expected = ContactNotFoundException.class)
 	public void shouldFailDeletionIfNameDoesntExist() throws IllegalArgumentException, ContactNotFoundException{
@@ -66,7 +66,7 @@ public class ContactServiceMockTest {
 		
 	}
 	
-	@Test(expected = ContactNotFoundException.class)
+/*	@Test(expected = ContactNotFoundException.class)
 	public void shouldFailUpdateIfNameDoesntExist() throws ContactException, ContactNotFoundException{
 		String name = "Jul";
 		Contact contact = new Contact();
@@ -78,5 +78,5 @@ public class ContactServiceMockTest {
 		contactService.updateContact(name, contact);
 		
 		
-	}
+	}*/
 }
